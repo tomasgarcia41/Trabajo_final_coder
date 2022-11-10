@@ -1,0 +1,117 @@
+{% extends 'blog/base.html' %}
+
+{% block contenido %}
+    <div class="row">
+        <!-- Blog entries-->
+        <div class="col-lg-8">
+            <!-- Featured blog post-->
+            <div class="card mb-4">
+                {% if  posts.0 %}
+                <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ posts.0.image.url }}" alt="..." /></a>
+                <div class="card-body">
+                    <div class="small text-muted">{{posts.0.date_published}}</div>
+                    <h2 class="card-title">{{posts.0.title}}</h2>
+                    <p class="card-text">{{posts.0.short_content}}</p>
+                    <a class="btn btn-primary" href="{% url 'detail-post' posts.0.id %}">Read more →</a>
+                </div>
+                {% endif %}
+            </div>
+            <!-- Nested row for non-featured blog posts-->
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- Blog post-->
+                    {% if posts.1 %}
+                    <div class="card mb-4">
+                        <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ posts.1.image.url }}" alt="..." /></a>
+                        <div class="card-body">
+                            <div class="small text-muted">{{posts.1.date_published}}</div>
+                            <h2 class="card-title">{{posts.1.title}}</h2>
+                            <p class="card-text">{{posts.1.short_content}}</p>
+                            <a class="btn btn-primary" href="{% url 'detail-post' posts.1.id %}">Read more →</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                    <!-- Blog post-->
+                    <div class="card mb-4">
+                    {% if posts.2 %}
+                        <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ posts.2.image.url }}" alt="..." /></a>
+                        <div class="card-body">
+                            <div class="small text-muted">{{posts.2.date_published}}</div>
+                            <h2 class="card-title">{{posts.2.title}}</h2>
+                            <p class="card-text">{{posts.2.short_content}}</p>
+                            <a class="btn btn-primary" href="{% url 'detail-post' posts.2.id %}">Read more →</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="col-lg-6">
+                    {% if posts.3 %}
+                    <!-- Blog post-->
+                    <div class="card mb-4">
+                        <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ posts.3.image.url }}" alt="..." /></a>
+                        <div class="card-body">
+                            <div class="small text-muted">{{posts.3.date_published}}</div>
+                            <h2 class="card-title">{{posts.3.title}}</h2>
+                            <p class="card-text">{{posts.3.short_content}}</p>
+                            <a class="btn btn-primary" href="{% url 'detail-post' posts.3.id %}">Read more →</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                    <!-- Blog post-->
+                    <div class="card mb-4">
+                        {% if posts.4 %}
+                                <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ posts.4.image.url }}" alt="..." /></a>
+                        <div class="card-body">
+                            <div class="small text-muted">{{posts.4.date_published}}</div>
+                            <h2 class="card-title">{{posts.4.title}}</h2>
+                            <p class="card-text">{{posts.4.short_content}}</p>
+                            <a class="btn btn-primary" href="{% url 'detail-post' posts.4.id %}">Read more →</a>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Side widgets-->
+        <div class="col-lg-4">
+            <!-- Search widget-->
+            <div class="card mb-4">
+                <div class="card-header">Search</div>
+                <div class="card-body">
+                    <form action="{% url 'search-by-name-post' %}" method="get">
+                        {% csrf_token %}
+                        <input type="search" name="post-title">
+                        <input type="submit" value="go">
+                    </form>
+                </div>
+            </div>
+            <!-- Categories widget-->
+            <div class="card mb-4">
+                <div class="card-header">Categories</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#!">Web Design</a></li>
+                                <li><a href="#!">HTML</a></li>
+                                <li><a href="#!">Freebies</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#!">JavaScript</a></li>
+                                <li><a href="#!">CSS</a></li>
+                                <li><a href="#!">Tutorials</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Side widget-->
+            <div class="card mb-4">
+                <div class="card-header">Side Widget</div>
+                <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
