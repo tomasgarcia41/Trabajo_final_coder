@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>esto es el titulo de la pestan:a de nuestro blog</title>
+    <title>Clients' Experiences Blog</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
@@ -18,18 +18,18 @@
     <!-- Responsive navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'index-blog' %}">ACA VA EL MISMO TITULO QUE SE PUSO ARRIBA</a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
                     class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'index-blog' %}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'about-us' %}">About</a></li><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"></button>   
                     <li class="nav-item"><a class="nav-link" href="{% url 'blog-login' %}">Login</a></li><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"></button>
                     <li class="nav-item"><a class="nav-link" href="{% url 'blog-logout' %}">Logout</a></li><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"></button>
                     <li class="nav-item"><a class="nav-link" href="{% url 'blog-signup' %}">Signup</a></li><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"></button>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="{% url 'list-post' %}">List</a></li><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"></button>
                 </ul>
             </div>
         </div>
@@ -41,8 +41,8 @@
         {% block header %}
         <div class="container">
             <div class="text-center my-5">
-                <h1 class="fw-bolder">aca va el mismo titulo del blog</h1>
-                <p class="lead mb-0">aca va el mismo titulo del blog</p>
+                <h1 class="fw-bolder">Clients' Experiences Blog</h1>
+                <p class="lead mb-0">Centralized database for internal users</p>
             </div>
         </div>
         {% endblock %}
