@@ -7,6 +7,9 @@ Among the different functionalities that it has, we can find:
 - Create new posts to share trips experiences
 - Update content in posts that were already created
 - Delete old material that is no longer relevant
+We are a group of three students: Tomás García, Gerónimo Benedetti and Leandro Perversi.
+We started working as a group to build the views and the templates, making sure all the requirements were met. 
+Then, after we had the main structure set up, we splitted the Readme, About section and the video among the three of us.
 
 INSTALL
 For installing this software you need to:
