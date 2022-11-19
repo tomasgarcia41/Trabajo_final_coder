@@ -53,6 +53,6 @@ windows:
 
 c:\> py mananage.py runserver
 
-Finally, go to localhost:8000/blog/list/  to access to the app.
+Finally, go to localhost:8000/blog/index/  to access to the app.
 
 If everthing goes well you should be able to open the browser and see the blog running.
